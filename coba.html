@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+/* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-left {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-left li {
+    margin-right: 20px;
+  }
+  
+  .navbar-left a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-center span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .navbar-right {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cta-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+
+  .coba {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 100px 40px;
+    height: 600px;
+    position: relative; /* Menempatkan section di atas gambar */
+    z-index: 1; /* Section hero berada di depan gambar */
+  }
+  
+  .coba-content {
+    max-width: 600px;
+    text-align: left;
+    z-index: 2; /* Membuat konten teks tetap di atas gambar */
+  }
+  
+  .coba-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .coba-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #F8A8B3;
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #555;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 100%;  /* You can adjust this value to control the width of the background */
+    height: 100%; /* Adjust this value to control the height of the background */
+    overflow: hidden;
+  }
+  
+  .background-image img {
+    width: 1820px;  /* Adjust this value to control the size of the image */
+    height: auto; /* This keeps the aspect ratio intact */
+    object-fit: cover; /* This will make sure the image covers the area but keeps the aspect ratio */
+    opacity: 0.3;
+    position: absolute; /* Use absolute positioning to control the image's position within the container */
+    top: 50%; /* This centers the image vertically */
+    left: 40%; /* This centers the image horizontally */
+    transform: translate(-50%, -50%) scaleX(-1); /* This will center the image based on its own size */
+  }
+
+  .soundtrack {
+    background-color: #FFEB3B;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative; /* Menempatkan section di atas gambar */
+    z-index: 1;
+  }
+  
+  .soundtrack-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .soundtrack h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .soundtrack h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  .soundtrack p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 0px;
+  }
+
+  .top-image {
+    width: 350px;
+    text-align: center;
+    /* margin-bottom: -50px; */
+    position: absolute;
+    top: 480px;
+    right: 0px;
+    z-index: 2; /* Menempatkan gambar di belakang section */
+  }
+  
+  .top-image img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-left">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Komang</a></li>
+          <li><a href="#">Pesan</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <div class="navbar-center">
+          <span>AHOLA</span>
+        </div>
+        <div class="navbar-right">
+          <button class="cta-button">Login</button>
+        </div>
+      </nav>
+
+      <div class="top-image">
+        <img src="3d.png" alt="Top Image" />
+      </div>
+
+      <section class="coba">
+        <div class="coba-content">
+          <h1>Cobakan sensasi menonton</h1>
+          <p>Film komang ini merupakan film yang bergenre romance, tetapi mereka mempunyai tantangan untuk melewati dinding yang tidak bisa dilewati tanpa persetujuan tuhan mereka.</p>
+          <a href="#" class="cta-button">Pesan Tiket</a>
+        </div>
+        <div class="background-image">
+          <img src="Komang1.jpg" alt="Background Image" />
+        </div>
+      </section>
+
+      <section class="soundtrack">
+        <div class="soundtrack-content">
+          <h2>Sound Track</h2>
+          <h3 id="song-name">Komang</h3>
+          <p id="creator-name">Pencipta: Raim Laode</p>
+          <p id="singer-name">Penyanyi: Raim Laode</p>
+          
+          <!-- Slider to change text -->
+          <label for="text-slider"></label>
+          <div class="slider-container">
+            <button class="arrow-btn" id="left-arrow">&#8592;</button> <!-- Left Arrow -->
+            <input type="range" id="text-slider" min="0" max="3" value="0">
+            <button class="arrow-btn" id="right-arrow">&#8594;</button> <!-- Right Arrow -->
+          </div>
+        </div>
+      </section>
+
+        <section class="trailer2">
+    <div class="trailer2-container">
+      <div class="left">
+        <div class="box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BpvnEiG9bTE?si=JqX4CNS2xCi5hPAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="right">
+        <!-- Konten kanan -->
+        <h2>KOMANG</h2>
+        <div class="three-box">
+            <div class="box-item1">XXI
+            </div>
+            <div class="box-item2">CGV
+                <img src="" alt="">
+            </div>
+            <div class="box-item3">Cinépolis
+                <img src="" alt="">
+            </div>
+          </div>
+        <p>Takdir mempertemukan Ode, pemuda Buton yang punya mimpi besar, dengan Ade, perantau dari Bali. Sebagaimana dua insan yang sedang jatuh cinta, mereka percaya kelak takdir akan mempersatukannya. Namun perjalanan mereka terhambat dengan kehadiran pria lain yang seiman dengan Ade, dan Ode harus ke Jakarta untuk mengejar mimpinya. Akankah Ode dan Ade dipersatukan takdir?.</p>
+        <p>Pencipta: Raim Laode</p>
+        <p>Penyanyi: Raim Laode</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
